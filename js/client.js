@@ -3,7 +3,7 @@
 
 
 
-const socket = io('https://chattingbackend.herokuapp.com/');
+const socket = io("https://chattingbackend.herokuapp.com");
 const form  = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
