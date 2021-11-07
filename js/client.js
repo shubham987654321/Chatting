@@ -9,7 +9,7 @@ const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
 
 
-var audio = new Audio('./../tune1.mp3');
+var audio = new Audio('./tune1.mp3');
 
 
 
