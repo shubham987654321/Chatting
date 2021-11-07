@@ -46,7 +46,14 @@ const name = prompt("Enter Your Name to Join for iChat");
 
 
 
-if(name != null  || typeof(name) === undefined){
+if(name === ""){
+    
+        name = prompt("Enter Your Name to Join for iChat");
+  
+   
+}
+else  if(name){
+    console.log(name)
     socket.emit('new-user-joined',name);
   
     socket.on('user-joined', name=>{
@@ -58,6 +65,7 @@ if(name != null  || typeof(name) === undefined){
         socket.on('receive', (message)=>{
             console.log(message);
             if(message.name != undefined){
+
                 append(`${message.name} : ${message.message} `, `left`);
             }
            
@@ -73,6 +81,11 @@ if(name != null  || typeof(name) === undefined){
                
                 })
 }
+else{
+    name = prompt("Enter Your Name to Join for iChat");
+}
+
+
 
 
 
